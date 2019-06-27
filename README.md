@@ -7,7 +7,6 @@ We keep blank space after encoding.
 ## Usage
 ### encode  
 （Usage 1）  
-lua_encode_lua_code.lua only receive file as standard input stream, so you can use the way of pipe like 'cat xxx | ' . 
 Request:
 ```
 lua encode_lua_code.lua 'local cjson = require "cjson";print("%d",os.clock());result = sleep(5);print("%d",os.clock());finish(result);'
@@ -21,6 +20,8 @@ Respond:
    
    
 （Usage 2）  
+lua_encode_lua_code.lua only receive file as standard input stream, so you can use the way of pipe like 'cat xxx | ' . 
+
 Request:
 ```
 cat test_scWalletPropose.lua |lua encode_lua_code.lua
